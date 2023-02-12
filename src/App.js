@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
+import "./App.css";
+
+import CustomNavBar from "./components/CustomNavBar";
+import CustomTitle from "./components/CustomTitle";
+import MoviesGallery from "./components/MoviesGallery";
+import CustomFooter from "./components/CustomFooter";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CustomNavBar/>
+      <CustomTitle/>
+      <h4>The Walking Dead</h4><MoviesGallery  film="Walking Dead"/>
+      <h4>The Office</h4><MoviesGallery  film="The Office"/>
+      <h4>Scrubs</h4><MoviesGallery film="Scrubs"/>
+     <CustomFooter/>
+      
+    </>
   );
 }
 
 export default App;
+
+
