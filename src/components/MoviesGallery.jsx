@@ -1,5 +1,4 @@
 import { Component } from "react";
-//import Card from "react-bootstrap/Card";
 
 class MoviesGallery extends Component {
   state = {
@@ -27,7 +26,7 @@ class MoviesGallery extends Component {
       }
     } catch (error) {
       console.log("error");
-      /*this.state({
+      /*this.setState({
         isLoading:false,
         hasError:true,
         errorMessage:`FATAL ERROR:${error.message}`
@@ -39,10 +38,12 @@ class MoviesGallery extends Component {
   }
   render() {
     return (
-      /*{this.state-hasError &&<Alert variant="danger">{this.state.errorMessage}</Alert}
+      /*{this.state.hasError &&<Alert variant="danger">{this.state.errorMessage}</Alert}
       {this.state.isLoading && (
-        <Spinner animation="border" variant="success"/>)}*/
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4 no-gutters text-center mt-3 mx-4">
+        <div className="text-center">
+        <Spinner animation="border" variant="success"/>
+        </div>)}*/
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4 no-gutters text-center mt-5 mx-4">
         {this.state.Search.filter((film) => film.Type === "series").map(
           (film) => (
             <div class="col mb-2 px-1">

@@ -7,7 +7,8 @@ import CustomNavBar from "./components/CustomNavBar";
 import CustomTitle from "./components/CustomTitle";
 import MoviesGallery from "./components/MoviesGallery";
 import CustomFooter from "./components/CustomFooter";
-
+/*import Error from "./components/Error";
+import Loading from "./components/Loading";*/
 
 function App() {
   return (
