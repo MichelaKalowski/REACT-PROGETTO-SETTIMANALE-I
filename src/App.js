@@ -10,8 +10,7 @@ import CustomFooter from "./components/CustomFooter";
 import NotFound from "./components/NotFound";
 import TvShows from "./components/TvShows";
 import MovieDetails from "./components/MovieDetails";
-/*import Error from "./components/Error";
-import Loading from "./components/Loading";*/
+
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 
 function App() {
