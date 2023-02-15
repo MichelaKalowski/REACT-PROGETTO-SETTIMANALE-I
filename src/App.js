@@ -4,22 +4,28 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import CustomNavBar from "./components/CustomNavBar";
-import CustomTitle from "./components/CustomTitle";
-import MoviesGallery from "./components/MoviesGallery";
+//import CustomTitle from "./components/CustomTitle";
+//import MoviesGallery from "./components/MoviesGallery";
 import CustomFooter from "./components/CustomFooter";
+import NotFound from "./components/NotFound";
+import TvShows from "./components/TvShows";
+import MovieDetails from "./components/MovieDetails";
 /*import Error from "./components/Error";
 import Loading from "./components/Loading";*/
+import { BrowserRouter,Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
+    <BrowserRouter>
       <CustomNavBar/>
-      <CustomTitle/>
-      <h4>The Walking Dead</h4><MoviesGallery  film="Walking Dead"/>
-      <h4>The Office</h4><MoviesGallery  film="The Office"/>
-      <h4>Scrubs</h4><MoviesGallery film="Scrubs"/>
+      <Routes>
+      <Route path="/tv-shows"element={<TvShows/>}/>
+      <Route path="/movie-details/:movieId"element={<MovieDetails/>}/>
+      <Route path="*"element={<NotFound spacings="mt-3 pt-5"/>} />
+     </Routes>
      <CustomFooter/>
-      
+     </BrowserRouter>
     </>
   );
 }
