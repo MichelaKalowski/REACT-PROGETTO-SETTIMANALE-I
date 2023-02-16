@@ -99,3 +99,14 @@ text-decoration: underline;
 .col img:hover {
   transform: scale(1.1);
 }
+.movie-button{
+  background-color: orange;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  
+}
+.movie-button:hover{
+  font-weight: bold;
+}
